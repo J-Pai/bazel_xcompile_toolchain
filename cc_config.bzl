@@ -16,8 +16,6 @@ load(
 )
 
 def _cc_toolchain_config_impl(ctx):
-    print(ctx.attr.name, ctx.attr.target_cpu)
-
     all_compile_actions = [
         ACTION_NAMES.c_compile,
         ACTION_NAMES.cpp_compile,
