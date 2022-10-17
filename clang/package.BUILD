@@ -75,6 +75,7 @@ cc_toolchain_config(
     target_cpu = "x86_64",
     builtin_include_directories = [
         "/usr/include/",
+        "clang/include/",
         "external/toolchain/clang/include/",
         "external/org_llvm_clang/include/",
         "external/org_llvm_clang/lib/clang/13.0.0/include/",
@@ -130,6 +131,7 @@ cc_toolchain_config(
     target_system_name = "linux_arm64",
     builtin_include_directories = [
         "/usr/aarch64-linux-gnu/include/",
+        "clang/include/",
         "external/toolchain/clang/include/",
         "external/org_llvm_clang/include/",
         "external/org_llvm_clang/lib/clang/13.0.0/include/",

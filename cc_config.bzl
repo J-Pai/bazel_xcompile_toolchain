@@ -250,6 +250,7 @@ def _cc_toolchain_config_impl(ctx):
                 actions = all_compile_actions,
                 flag_groups = [flag_group(flags = [
                     "-nostdinc++",
+                    "-isystem", "clang/include",
                     "-isystem", "external/toolchain/clang/include",
                     "-isystem", "external/org_llvm_libcxx/include",
                     "-isystem", "external/org_llvm_libcxxabi/include",
