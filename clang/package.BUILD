@@ -73,6 +73,7 @@ filegroup(
 cc_toolchain_config(
     name = "linux_x86_64_toolchain_config",
     target_cpu = "x86_64",
+    target_system_name = "linux_x86_64",
     builtin_include_directories = [
         "/usr/include/",
         "clang/include/",
