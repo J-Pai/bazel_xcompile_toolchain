@@ -264,6 +264,7 @@ def _cc_toolchain_config_impl(ctx):
                     "-ldl",
                     "-lrt",
                     "-lstdc++",
+                    "-lc++",
                 ])],
             ),
         ],
