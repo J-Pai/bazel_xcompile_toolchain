@@ -8,6 +8,12 @@ Below are the supported targets (other than linux x86_64).
 
 ## Ubuntu 20.04 x86_64
 
+Build Dependencies:
+
+```bash
+sudo apt install libc++-dev libc++abi-dev
+```
+
 Example invocation:
 
 ```

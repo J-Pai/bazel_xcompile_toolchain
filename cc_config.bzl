@@ -263,7 +263,17 @@ def _cc_toolchain_config_impl(ctx):
                     "-lpthread",
                     "-ldl",
                     "-lrt",
-                    "-lstdc++",
+                ])],
+            ),
+        ],
+    )
+
+    stdlib_host_feature = feature(
+        name = "stdlib_host_feature",
+        flag_sets = [
+            flag_set(
+                actions = all_link_actions,
+                flag_groups = [flag_group(flags = [
                     "-lc++",
                 ])],
             ),
@@ -349,6 +359,11 @@ def _cc_toolchain_config_impl(ctx):
         additional_features.extend([
             "aarch64",
         ])
+    elif ctx.attr.target_cpu == "x86_64":
+        additional_features.extend([
+            "stdlib_host_feature",
+        ])
+
 
     common_feature = feature(
         name = "common",
@@ -368,6 +383,7 @@ def _cc_toolchain_config_impl(ctx):
     features = [
         cpp20_feature,
         stdlib_feature,
+        stdlib_host_feature,
         determinism_feature,
         alwayslink_feature,
         pic_feature,
