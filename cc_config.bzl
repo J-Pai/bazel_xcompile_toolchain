@@ -263,6 +263,7 @@ def _cc_toolchain_config_impl(ctx):
                     "-lpthread",
                     "-ldl",
                     "-lrt",
+                    "-lstdc++",
                 ])],
             ),
         ],
